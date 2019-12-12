@@ -1,0 +1,103 @@
+{
+	"variables": [],
+	"info": {
+		"name": "line",
+		"_postman_id": "5419a576-3da8-bf0f-5fe2-cc79b6809842",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://notify-bot.line.me/oauth/token",
+			"request": {
+				"url": "https://notify-bot.line.me/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "GBo3LR1j2grgHGT5AaC5yA",
+							"description": ""
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8080/index.php",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "StFrf3s60jDSmvtjEkSxfw",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "VmtFn1UJoFNo5dI4r08bGbeIRLWWaeIgKmK0j3Uq8P5",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://notify-api.line.me/api/notify?message=ทดสอบๆๆ",
+			"request": {
+				"url": {
+					"raw": "https://notify-api.line.me/api/notify?message=ทดสอบๆๆ",
+					"protocol": "https",
+					"host": [
+						"notify-api",
+						"line",
+						"me"
+					],
+					"path": [
+						"api",
+						"notify"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "ทดสอบๆๆ",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer VdTKli6t1HsGBmaxpGrflQh9YZtzFoHUWCQLnUBVZ04",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
